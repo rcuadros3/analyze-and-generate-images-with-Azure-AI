@@ -1,6 +1,6 @@
 const generateImage = async (prompt, model = "dall-e-3", n = 1, size = "1024x1024") => {
-    const apiKey = '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';
-    const apiUrl = 'https://api.openai.com/v1/images/generations';
+    const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+    const apiUrl = process.env.REACT_APP_OPENAI_API_URL;
   
     try {
       const response = await fetch(apiUrl, {

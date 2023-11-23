@@ -1,6 +1,6 @@
 const analyzeImage = async (imageUrl, features) => {
-  const subscriptionKey = '085d1e23db554897a99227faf2e6d31f';
-  const endpoint = 'https://images-azure-ai.cognitiveservices.azure.com/';
+  const subscriptionKey = process.env.REACT_APP_AZURE_SUBSCRIPTION_KEY;
+  const endpoint = process.env.REACT_APP_AZURE_ENDPOINT;
   const apiUrl = `${endpoint}vision/v3.0/analyze?api-version=2023-02-01-preview&${features}`;
 
   try {
